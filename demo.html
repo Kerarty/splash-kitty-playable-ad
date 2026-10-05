@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Splash Kitty! — играбельная реклама · демо для портфолио</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      background: radial-gradient(1200px 800px at 50% -10%, #17263b 0%, #0b1220 60%);
+      color: #dce7f5;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 16px 40px;
+    }
+    h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: .5px; }
+    h1 em { color: #ffb74d; font-style: normal; }
+    .sub { color: #8fa4bd; font-size: 14px; margin-bottom: 18px; text-align: center; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 22px; }
+    .badge {
+      font-size: 12px; font-weight: 600; color: #a8d4ff;
+      border: 1px solid #2a3c55; background: #101b2d;
+      padding: 5px 12px; border-radius: 999px;
+    }
+    .phone {
+      width: min(390px, 92vw);
+      aspect-ratio: 390 / 844;
+      border-radius: 44px;
+      border: 10px solid #1d2939;
+      box-shadow: 0 30px 80px rgba(0,0,0,.55), inset 0 0 0 2px #0b1220;
+      overflow: hidden;
+      background: #e3f4ff;
+      position: relative;
+    }
+    .phone iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .notch {
+      position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+      width: 110px; height: 24px; border-radius: 14px; background: #1d2939; z-index: 2;
+      pointer-events: none;
+    }
+    .links { margin-top: 22px; display: flex; gap: 18px; font-size: 14px; }
+    .links a { color: #7fc4ff; text-decoration: none; border-bottom: 1px dotted #2c4a6e; }
+    .credit { margin-top: 14px; color: #55677f; font-size: 12px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Splash <em>Kitty!</em> — играбельная реклама</h1>
+  <div class="sub">Рисуй линию пальцем и направь капли дождя в кота-стакан. 3 уровня, сессия ~30&nbsp;секунд.</div>
+  <div class="badges">
+    <span class="badge">один index.html</span>
+    <span class="badge">0 сетевых запросов</span>
+    <span class="badge">цель — 60 FPS</span>
+    <span class="badge">PixiJS 8 + matter.js</span>
+    <span class="badge">синтез звука на лету</span>
+  </div>
+  <div class="phone">
+    <div class="notch"></div>
+    <iframe src="./index.html" title="Splash Kitty — играбельная реклама" allow="autoplay"></iframe>
+  </div>
+  <div class="links">
+    <a href="./index.html" target="_blank">Открыть чистый ad unit ↗</a>
+  </div>
+  <div class="credit">Демо для портфолио · clickTag ведёт в Google Play — стандартное поведение играбельной рекламы</div>
+</body>
+</html>
