@@ -4,6 +4,8 @@
 по ней стекают в кота-стакана. Один самодостаточный `index.html`, как настоящий
  рекламный unit для Google Ads / AppLovin / MRAID-среды.
 
+> **Играть онлайн:** [kerarty.github.io/splash-kitty-playable-ad](https://kerarty.github.io/splash-kitty-playable-ad/) · [демо-страница](https://kerarty.github.io/splash-kitty-playable-ad/demo.html)
+
 | Teaser | Геймплей | Победа | End card |
 | --- | --- | --- | --- |
 | ![Teaser](docs/01-teaser.png) | ![Gameplay](docs/02-gameplay.png) | ![Win](docs/03-win.png) | ![End card](docs/04-endcard.png) |
