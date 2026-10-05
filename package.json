@@ -1,0 +1,20 @@
+{
+  "name": "splash-kitty-playable-ad",
+  "version": "1.0.0",
+  "description": "Playable ad portfolio piece: draw a line, guide raindrops into the cat-glass. PixiJS 8 + matter.js, single-file HTML5 ad unit.",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "serve": "node tools/serve.mjs 8137",
+    "watertest": "node tools/watertest.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "matter-js": "^0.20.0",
+    "pixi.js": "^8.22.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
