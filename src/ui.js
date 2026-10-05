@@ -63,7 +63,7 @@ export class UI {
     // чип уровня
     this.chip = new Container();
     const chipBg = new Graphics();
-    chipBg.roundRect(-92, -27, 184, 54, 27).fill({ color: COL.white, alpha: 0.85 });
+    chipBg.roundRect(-108, -27, 216, 54, 27).fill({ color: COL.white, alpha: 0.85 });
     this.chipText = label('LEVEL 1/3', 30, { fill: COL.inkText });
     this.chipText.anchor.set(0.5);
     this.chip.addChild(chipBg, this.chipText);
@@ -111,7 +111,7 @@ export class UI {
   }
 
   setLevel(n, total) {
-    this.chipText.text = `LEVEL ${n}/${total}`;
+    this.chipText.text = `УРОВЕНЬ ${n}/${total}`;
     popIn(this.chip, 0.6, 400);
   }
 
@@ -134,11 +134,11 @@ export class UI {
     this.logo = makeLogo(1);
     this.logo.position.set(W / 2, 430);
     t.addChild(this.logo);
-    this.tapText = label('TAP TO PLAY', 48, { stroke: { color: COL.inkText, width: 10, join: 'round' } });
+    this.tapText = label('ТАПНИ, ЧТОБЫ ИГРАТЬ', 46, { stroke: { color: COL.inkText, width: 10, join: 'round' } });
     this.tapText.anchor.set(0.5);
     this.tapText.position.set(W / 2, 800);
     t.addChild(this.tapText);
-    const note = label('playable ad · demo', 26, { weight: '600', fill: 0x37474f });
+    const note = label('playable-реклама · демо', 26, { weight: '600', fill: 0x37474f });
     note.anchor.set(0.5);
     note.alpha = 0.55;
     note.position.set(W / 2, 1272);
@@ -168,8 +168,7 @@ export class UI {
   showBanner(big, sub, fill, stroke) {
     this.bannerBig.text = big;
     this.bannerBig.style.fill = fill;
-    this.bannerBig.style.stroke = { color: stroke, width: 12, join: 'round' };
-    this.bannerSub.text = sub;
+    this.bannerBig.style.stroke = { color: stroke, width: 12, join: 'round' };    this.bannerSub.text = sub;
     this.banner.visible = true;
     this.banner.alpha = 1;
     this.banner.scale.set(0.2);
@@ -220,7 +219,7 @@ export class UI {
       this.stars.push(g);
     }
 
-    const rating = label('4.8  ·  10M+ players', 34, { weight: '700' });
+    const rating = label('4,8  ·  10M+ игроков', 34, { weight: '700' });
     rating.anchor.set(0.5);
     rating.position.set(W / 2, 470);
     e.addChild(rating);
@@ -233,7 +232,7 @@ export class UI {
     ctaBg.roundRect(-230, -60, 460, 120, 60)
       .fill({ color: COL.accent })
       .stroke({ width: 6, color: COL.white, alpha: 0.9 });
-    const ctaText = label('INSTALL NOW', 52);
+    const ctaText = label('УСТАНОВИТЬ', 50);
     ctaText.anchor.set(0.5);
     this.ctaBtn.addChild(ctaShadow, ctaBg, ctaText);
     this.ctaBtn.position.set(W / 2, 660);
@@ -250,7 +249,7 @@ export class UI {
     });
     e.addChild(this.ctaBtn);
 
-    const freeLine = label('FREE  ·  No wifi needed', 27, { weight: '700', fill: 0xb0c4d4 });
+    const freeLine = label('БЕСПЛАТНО  ·  Без интернета', 27, { weight: '700', fill: 0xb0c4d4 });
     freeLine.anchor.set(0.5);
     freeLine.position.set(W / 2, 760);
     e.addChild(freeLine);
@@ -258,8 +257,8 @@ export class UI {
     // мини-CTA во время геймплея — как в реальных playable unit
     this.miniCta = new Container();
     const mBg = new Graphics();
-    mBg.roundRect(-64, -22, 128, 44, 22).fill({ color: COL.accent, alpha: 0.95 });
-    const mText = label('Install', 24, { weight: '800' });
+    mBg.roundRect(-72, -22, 144, 44, 22).fill({ color: COL.accent, alpha: 0.95 });
+    const mText = label('Установить', 23, { weight: '800' });
     mText.anchor.set(0.5);
     this.miniCta.addChild(mBg, mText);
     this.miniCta.position.set(W - 84, 1288);

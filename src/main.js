@@ -250,7 +250,7 @@ function evaluate() {
   else fail();
 }
 
-const WIN_SUBS = ['The kitty is happy!', 'Great job!', 'Splashing good!'];
+const WIN_SUBS = ['Котик доволен!', 'Отличная работа!', 'Брызги восторга!'];
 
 function win() {
   sfx.win();
@@ -262,10 +262,10 @@ function win() {
   burst(TEX.heart, level.cupX, 1050, 6, { tint: 0xf06292, spread: 4, vy0: -6, vy1: -3, g: -0.01, l0: 900, l1: 1300, sway: 1.2 });
   shake(5, 260);
   if (currentLevel + 1 >= LEVELS.length) {
-    ui.showBanner('PURRFECT!', 'You did it!', COL.star, COL.accentDark);
+    ui.showBanner('ПУРФЕКТ!', 'У тебя получилось!', COL.star, COL.accentDark);
     schedule(showEnd, 1600);
   } else {
-    ui.showBanner('PURRFECT!', WIN_SUBS[currentLevel], COL.star, COL.accentDark);
+    ui.showBanner('ПУРФЕКТ!', WIN_SUBS[currentLevel], COL.star, COL.accentDark);
     schedule(() => startLevel(currentLevel + 1, false), 1600);
   }
 }
@@ -274,7 +274,7 @@ function fail() {
   sfx.fail();
   scene.catcup.setMood('sad');
   shake(6, 300);
-  ui.showBanner('ALMOST!', 'Try again!', COL.white, COL.danger);
+  ui.showBanner('ПОЧТИ!', 'Попробуй ещё!', COL.white, COL.danger);
   schedule(() => startLevel(currentLevel, true), 1600);
 }
 
